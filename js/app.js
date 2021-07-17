@@ -111,7 +111,7 @@ const start = async () => {
     getServerAddress(client.session.dcId, client.session.port),
     client.session.port
   );
-  const message = `The generated string session by TGSESSION:\n\n${client.session.save()}`;
+  const message = `The generated string session by TGSESSION:\n\n<code>${client.session.save()}</code>`;
   await client.sendMessage("me", { message: message });
   showResultSection();
 };
